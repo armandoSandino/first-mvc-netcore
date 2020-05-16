@@ -1,0 +1,43 @@
+﻿
+@model List<EFC_1.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">ASP.NET Core 2.2.6</h1>
+    <p>Pomelo.EntityFrameworkCore.Mysql</p>
+</div>
+
+<table class="table">
+<thead>
+<tr>
+<th>Nombre</th>
+<th>Email</th>
+<th>Telefono</th>
+<th>Sexo</th>
+<tr>
+</thead>
+
+<tbody>
+@foreach(var item in Model )
+{
+    <tr>
+    <td>
+    @item.Nombre 
+    </td>
+    <td>
+    @item.Email
+    </td>
+    <td>
+    @item.Telefono
+    </td>
+    <td>
+    @item.Sexo
+    </td>
+    </tr>
+}
+</tbody>
+
+</table>
